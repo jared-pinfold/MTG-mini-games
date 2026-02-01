@@ -13,6 +13,7 @@ router.get('/hangman', async (req, res) => {
     const punctuation = new Array(
       ...new Set(name.split('').filter((c: string) => c.match(/[^a-zA-Z0-9]/))),
     ) as string[]
+    const correctLetters = new Array(...new Set(name.toLowerCase().split('')))
     res.json({ name, image: image_uris.normal, punctuation } as IHangmanCard)
   } catch (error) {
     console.log(error)

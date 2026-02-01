@@ -6,29 +6,29 @@ import { Loading } from '../Loading'
 export function Hangman() {
   // Fetch data for a random MTG card
   const { data: card, isError, isLoading } = useCard()
-  
+
   // State
-  const [guessed, setGuessed] = useState([] as string[])   // Used to determine if a letter on the keyboard is greyed out
+  const [guessed, setGuessed] = useState([] as string[]) // Used to determine if a letter on the keyboard is greyed out
   const [remainingGuesses, setRemainingGuesses] = useState(5)
-  const [correctlyGuessed, setCorrectlyGuessed ] = useState([] as string[]) // Used to determine if a letter should appear on the answer gameboard
+  const [correctlyGuessed, setCorrectlyGuessed] = useState([] as string[]) // Used to determine if a letter should appear on the answer gameboard
+  var correctLetters = [] as string[]
 
   // Ensure punctuation and spaces are displayed in the answer gameboard
-  useEffect(()=> {
+  useEffect(() => {
     if (card) {
       setCorrectlyGuessed(card.punctuation)
+      correctLetters = card.correctLetters
     }
   }, [card])
 
-console.log('corrGuess', correctlyGuessed)
-  // Determine which letters are correct
-  const correctLetters = new Array(...new Set(card?.name.toLowerCase().split('')))
-console.log("corr", correctLetters)
+  console.log('corrGuess', correctlyGuessed)
+
   // Which characters to display in the answer gameboard
   const charactersOrUnderscores = card?.name
     .split('')
     .map((c) => {
       if (correctlyGuessed.includes(c.toLowerCase())) return c
-      else return "_"
+      else return '_'
     })
     .join('')
 
