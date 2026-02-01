@@ -1,9 +1,10 @@
 import request from 'superagent'
+import { IHangmanCard } from '../../models/cards'
 
 const rootUrl = '/api/v1/cards'
 
-export function getRandomCard(): Promise<string[]> {
+export function getRandomCard(): Promise<IHangmanCard> {
   return request.get(rootUrl + '/hangman').then((res) => {
-    return res.body
+    return res.body as IHangmanCard
   })
 }

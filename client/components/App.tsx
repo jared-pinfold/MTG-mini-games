@@ -1,13 +1,15 @@
-import { useCard } from '../hooks/useCard.ts'
+import { Footer } from './Footer.tsx'
+import { Games } from './Games.tsx'
+import { Header } from './Header.tsx'
 
 function App() {
-  const { data } = useCard()
-  console.log(data)
 
   return (
     <>
       <div className="app">
-        <h1>MTG minigames</h1>
+        <Header />
+        <Games />
+        <Footer />
       </div>
     </>
   )
