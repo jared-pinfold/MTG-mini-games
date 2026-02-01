@@ -1,13 +1,13 @@
-import { useFruits } from '../hooks/useFruits.ts'
+import { useCard } from '../hooks/useCard.ts'
 
 function App() {
-  const { data } = useFruits()
+  const { data } = useCard()
+  console.log(data)
 
   return (
     <>
       <div className="app">
-        <h1>Fullstack Boilerplate - with Fruits!</h1>
-        <ul>{data && data.map((fruit) => <li key={fruit}>{fruit}</li>)}</ul>
+        <h1>MTG minigames</h1>
       </div>
     </>
   )
