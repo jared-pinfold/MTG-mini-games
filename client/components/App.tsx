@@ -3,7 +3,6 @@ import { Games } from './Games.tsx'
 import { Header } from './Header.tsx'
 
 function App() {
-
   return (
     <>
       <div className="app">
