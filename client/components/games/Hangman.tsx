@@ -15,8 +15,7 @@ export function Hangman() {
   // Ensure punctuation and spaces are displayed in the answer gameboard
   useEffect(()=> {
     if (card) {
-      const punctuation = card.name.split('').filter(c => /[^a-zA-Z0-9]/.test(c))
-      setCorrectlyGuessed(s => [...s, ...punctuation])
+      setCorrectlyGuessed(card.punctuation)
     }
   }, [card])
 

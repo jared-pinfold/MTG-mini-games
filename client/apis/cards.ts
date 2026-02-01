@@ -3,8 +3,8 @@ import { IHangmanCard } from '../../models/cards'
 
 const rootUrl = '/api/v1/cards'
 
-export function getRandomCard(): Promise<IHangmanCard> {
+export function getRandomCardForHangman(): Promise<IHangmanCard> {
   return request.get(rootUrl + '/hangman').then((res) => {
-    return res.body as IHangmanCard
+    return res.body
   })
 }
