@@ -1,3 +1,3 @@
-export function Result () {
+export function Result() {
   return <></>
 }

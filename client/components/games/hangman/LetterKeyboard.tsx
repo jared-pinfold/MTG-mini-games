@@ -2,8 +2,11 @@ import { useQueryClient } from '@tanstack/react-query'
 import { alphabet } from './data/alphabet'
 import { IHangmanCard } from '../../../../models/cards'
 
-export function LetterKeyboard( { setRemainingGuesses }: { setRemainingGuesses: React.Dispatch<React.SetStateAction<number>> }) {
-
+export function LetterKeyboard({
+  setRemainingGuesses,
+}: {
+  setRemainingGuesses: React.Dispatch<React.SetStateAction<number>>
+}) {
   const data = useQueryClient().getQueryData(['card']) as IHangmanCard
   const queryClient = useQueryClient()
 
@@ -11,7 +14,7 @@ export function LetterKeyboard( { setRemainingGuesses }: { setRemainingGuesses: 
     if (data.correctLetters.includes(letter)) {
       queryClient.setQueryData(['card'], {
         ...data,
-        displayCharacters: [...data.displayCharacters, letter]
+        displayCharacters: [...data.displayCharacters, letter],
       })
     } else {
       setRemainingGuesses((prev) => prev - 1)

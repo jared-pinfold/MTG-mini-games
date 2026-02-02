@@ -11,13 +11,18 @@ interface Props {
   charactersOrUnderscores: string | undefined
   remainingGuesses: number
 }
-export function GameBoard({ gameState, remainingGuesses, setRemainingGuesses, charactersOrUnderscores }: Props) {
+export function GameBoard({
+  gameState,
+  remainingGuesses,
+  setRemainingGuesses,
+  charactersOrUnderscores,
+}: Props) {
   const queryClient = useQueryClient()
   const data = queryClient.getQueryData(['card']) as IHangmanCard
 
   return (
     <>
-    <Countdown {...{ remainingGuesses }}/>
+      <Countdown {...{ remainingGuesses }} />
       <WordDisplay {...{ charactersOrUnderscores }} />
       <LetterKeyboard {...{ setRemainingGuesses }} />
     </>
