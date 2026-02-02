@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Menu } from './Menu'
-import { Hangman } from './games/Hangman'
+import { Hangman } from './games/hangman/Hangman'
 
 export function Games() {
   const [game, setGame] = useState('menu')
