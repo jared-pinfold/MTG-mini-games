@@ -22,8 +22,6 @@ export function Hangman() {
     .join('')
 
   function checkGameState() {
-    console.log('remainingGuesses', remainingGuesses)
-    console.log('charactersOrUnderscores', !charactersOrUnderscores?.match('_'))
     if (remainingGuesses === 0) setGameState('loss')
     if (!charactersOrUnderscores?.match('_')) setGameState('win')
   }
@@ -35,6 +33,7 @@ export function Hangman() {
     return (
       <>
         <h2>Hangman</h2>
+        <p>Guess the name of this random Magic: The Gathering card!</p>
         {gameState === 'play' && (
           <GameBoard
             {...{
@@ -48,7 +47,7 @@ export function Hangman() {
         )}
         {gameState === 'win' && <p>You win!</p>}
         {gameState === 'loss' && <p>You lose!</p>}
-        <img src={data.image} alt={''} /> {/* temp */}
+        <img src={gameState === 'play' ? data.artOnly : data.image} alt={''} /> {/* temp */}
       </>
     )
 }

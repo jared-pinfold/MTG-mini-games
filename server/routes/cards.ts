@@ -20,6 +20,7 @@ router.get('/hangman', async (req, res) => {
     res.json({
       name,
       image: image_uris.normal,
+      artOnly: image_uris.art_crop,
       correctLetters,
       displayCharacters,
     } as IHangmanCard)

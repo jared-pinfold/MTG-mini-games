@@ -3,4 +3,5 @@ export interface IHangmanCard {
   image: string
   correctLetters: string[]
   displayCharacters: string[]
+  artOnly: string
 }
