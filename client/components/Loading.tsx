@@ -1,3 +1,3 @@
 export function Loading() {
-  return <p>Loading</p>
+  return <p>Awaiting card info from database...</p>
 }

@@ -5,6 +5,7 @@ type Props = {
 export function Menu({ setGame }: Props) {
   return (
     <>
+    <p>Pick a game:</p>
       <button onClick={() => setGame('hangman')}>Hangman</button>
     </>
   )

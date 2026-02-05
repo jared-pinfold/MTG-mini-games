@@ -1,3 +1,8 @@
 export function Header() {
-  return <h1>MTG Mini Games</h1>
+  return (
+    <>
+      <h1>MTG Mini Games</h1>
+      <hr />
+    </>
+  )
 }

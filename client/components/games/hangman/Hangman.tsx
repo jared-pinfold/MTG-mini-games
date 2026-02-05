@@ -47,7 +47,7 @@ export function Hangman() {
         )}
         {gameState === 'win' && <p>You win!</p>}
         {gameState === 'loss' && <p>You lose!</p>}
-        <img src={gameState === 'play' ? data.artOnly : data.image} alt={''} /> {/* temp */}
+        <img className="hangman-image" src={gameState === 'play' ? data.artOnly : data.image} alt={''} /> {/* temp */}
       </>
     )
 }

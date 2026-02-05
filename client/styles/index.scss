@@ -5,6 +5,14 @@ html, body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
 }
+hr {
+  color: #f313c3;
+  width: 100%;
+}
+
+button {
+  margin: 3px;
+}
 
 .app-container {
   display: flex;
@@ -15,6 +23,7 @@ html, body {
 /* The content container takes up the available space, pushing the footer down */
 .content-wrap {
   flex-grow: 1; /* Allows this element to grow and fill available space */
+    text-align: center;
 }
 
 /* Footer styles (optional) */
@@ -25,6 +34,14 @@ html, body {
   text-align: center;
 }
 
-button {
-  margin: 3px;
+.hangman-image {
+margin-top: 2rem;
+height:min-content
+}
+
+.alphabet {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
 }
