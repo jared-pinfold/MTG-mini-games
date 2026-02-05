@@ -1,8 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
 
-html, 
-body {
+html, body {
+  height: 100%;
+  margin: 0;
   font-family: 'Montserrat', sans-serif;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* The content container takes up the available space, pushing the footer down */
+.content-wrap {
+  flex-grow: 1; /* Allows this element to grow and fill available space */
+}
+
+/* Footer styles (optional) */
+.footer {
+  background-color: #f313c3;
+  color: rgb(1, 0, 0);
+  padding: 1rem;
+  text-align: center;
 }
 
 button {

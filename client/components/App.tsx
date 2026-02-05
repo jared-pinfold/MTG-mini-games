@@ -5,7 +5,7 @@ import { Header } from './Header.tsx'
 function App() {
   return (
     <>
-      <div className="app">
+      <div className="app app-container">
         <Header />
         <Games />
         <Footer />

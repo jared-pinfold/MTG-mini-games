@@ -1,3 +1,3 @@
 export function Footer() {
-  return <>App by Grö$ People</>
+  return <div className="footer">App by Grö$ People</div>
 }

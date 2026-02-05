@@ -4,7 +4,11 @@ import { Hangman } from './games/hangman/Hangman'
 
 export function Games() {
   const [game, setGame] = useState('menu')
-  if (game === 'menu') return <Menu setGame={setGame} />
-  if (game === 'hangman') return <Hangman />
-  return
+
+  return (
+    <div className="content-wrap">
+      {game === 'menu' && <Menu setGame={setGame} />}
+      {game === 'hangman' && <Hangman />}
+    </div>
+  )
 }
