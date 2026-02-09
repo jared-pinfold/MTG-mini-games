@@ -3,7 +3,7 @@ import { IHangmanCard } from '../../models/cards'
 
 const rootUrl = {
   local: '/api/v1/cards',
-  deployed: 'http://mtg-express.borb.nz/api/v1/cards',
+  deployed: 'https://mtg-express.borb.nz/api/v1/cards',
 }
 
 const environment = 'deployed'
