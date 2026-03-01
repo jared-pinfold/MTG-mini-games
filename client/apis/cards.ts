@@ -6,7 +6,7 @@ const rootUrl = {
   deployed: 'https://mtg-express.borb.nz/api/v1/cards',
 }
 
-const environment = 'deployed'
+const environment = 'local'
 
 export function getRandomCardForHangman(): Promise<IHangmanCard> {
   return request.get(rootUrl[environment] + '/hangman').then((res) => {
