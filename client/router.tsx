@@ -4,7 +4,6 @@ import {
   Route,
 } from 'react-router-dom'
 import App from './components/App'
-import { Games } from './components/Games'
 import { Hangman } from './components/games/hangman/Hangman'
 import { Menu } from './components/Menu'
 
