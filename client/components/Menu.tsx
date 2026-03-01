@@ -1,12 +1,10 @@
-type Props = {
-  setGame: React.Dispatch<React.SetStateAction<string>>
-}
+import { Link } from "react-router-dom"
 
-export function Menu({ setGame }: Props) {
+export function Menu() {
   return (
     <>
     <p>Pick a game:</p>
-      <button onClick={() => setGame('hangman')}>Hangman</button>
+      <Link to="hangman">Hangman</Link>
     </>
   )
 }

@@ -1,5 +1,5 @@
+import { Outlet } from 'react-router-dom'
 import { Footer } from './Footer.tsx'
-import { Games } from './Games.tsx'
 import { Header } from './Header.tsx'
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <>
       <div className="app app-container">
         <Header />
-        <Games />
+        <Outlet />
         <Footer />
       </div>
     </>
