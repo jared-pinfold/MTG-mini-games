@@ -7,7 +7,9 @@ function App() {
     <>
       <div className="app app-container">
         <Header />
-        <Outlet />
+        <div className="content-wrap">
+          <Outlet />
+        </div>
         <Footer />
       </div>
     </>
