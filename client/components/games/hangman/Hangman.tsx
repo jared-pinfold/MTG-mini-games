@@ -34,17 +34,20 @@ export function Hangman() {
       <>
         <div className="flex-container">
           <h2>Hangman</h2>
-          <p>Guess the name of this random Magic: The Gathering card!</p>
           {gameState === 'play' && (
-            <GameBoard
-              {...{
-                gameState,
-                remainingGuesses,
-                setRemainingGuesses,
-                charactersOrUnderscores,
-                checkGameState,
-              }}
-            />
+            <div className='flex-container' >
+
+              <p>Guess the name of this random Magic: The Gathering card!</p>
+              <GameBoard
+                {...{
+                  gameState,
+                  remainingGuesses,
+                  setRemainingGuesses,
+                  charactersOrUnderscores,
+                  checkGameState,
+                }}
+              />
+            </div>
           )}
           {gameState === 'win' && <p>You win!</p>}
           {gameState === 'loss' && <p>You lose!</p>}
